@@ -1,0 +1,30 @@
+<div class="header1">
+    <div class="container">   
+        <div class="row">
+            <div class="col-lg-12">   
+                <div class="row">
+                <div class="col-lg-5 col-lg-offset-2">
+                    <h1 class="main-page"><span class="header-text">MY PAGE</span></h1>
+                </div>
+                <div class="col-lg-5">
+                    <div class="btn-real">
+                        <%= link_to "/users/#{current_user.id}" do  %>
+                            <%= fa_icon("home") %>
+                        <% end %>
+                    </div>
+                    <div class="btn-real">
+                        <%= link_to "/giveyous" do  %>
+                           <%= fa_icon("heart") %>
+                        <% end %>
+                    </div>
+                    <div class="btn-real1">
+                        <%= link_to "/givemes" do  %>
+                          <%= fa_icon("heart") %>
+                        <% end %>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

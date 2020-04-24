@@ -1,0 +1,48 @@
+<div class="header1">
+    <div class="container">   
+        <div class="row">
+            <div class="col-lg-12">   
+                <div class="row">
+                <div class="col-lg-5 col-lg-offset-2">
+                    <h1 class="main-page"><span class="header-text">Give me list</span></h1>
+                </div>
+                <div class="col-lg-5">
+                    <div class="btn-real">
+                        <%= link_to "/users/#{current_user.id}" do  %>
+                            <%= fa_icon("home") %>
+                        <% end %>
+                    </div>
+                    <div class="btn-real">
+                        <%= link_to "/givemes" do  %>
+                          <%= fa_icon("heart") %>
+                        <% end %>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="row">
+                <% @givemes.each do |f| %>
+                    <div class="col-lg-4">
+                        <h1 class="text-center"><%= f.user.name %></h1>
+                    </div>
+                    <div class="col-lg-6 col-lg-offset-2">
+                        <h1 class="text-center"><%= f.title %></h1>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+    <div class="list-new-btn">
+        <div class="btn-real">
+            <%= link_to "/givemes/new" do  %>
+                <%= fa_icon("home") %>
+            <% end %>
+        </div>
+    </div>
+</div> 
